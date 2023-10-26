@@ -5,8 +5,8 @@ local M = {}
 local highlights = require "custom.highlights"
 
 M.ui = {
-  theme = "onenord_light",
-  theme_toggle = { "onenord_light", "onenord_light" },
+  theme = "oceanic-next",
+  theme_toggle = { "oceanic-next", "oceanic-next" },
 
   hl_override = highlights.override,
   hl_add = highlights.add,
@@ -19,5 +19,7 @@ M.mappings = require "custom.mappings"
 
 -- Relative line numbers
 vim.opt.relativenumber = true
+-- Wrap lines
+vim.opt.wrap = false
 
 return M
