@@ -5,8 +5,8 @@ local M = {}
 local highlights = require "custom.highlights"
 
 M.ui = {
-  theme = "oceanic-next",
-  theme_toggle = { "oceanic-next", "oceanic-next" },
+  theme = "one_light",
+  theme_toggle = { "one_light", "one_light" },
 
   hl_override = highlights.override,
   hl_add = highlights.add,
@@ -21,5 +21,7 @@ M.mappings = require "custom.mappings"
 vim.opt.relativenumber = true
 -- Wrap lines
 vim.opt.wrap = false
+-- scrolloff = 8
+vim.opt.scrolloff = 8
 
 return M
