@@ -109,6 +109,16 @@ local plugins = {
     end,
   },
 
+  -- Latex
+  {
+    "lervag/vimtex",
+    -- ft = "tex",
+    -- config = function()
+    --   require "plugins.configs.vimtex"
+    -- end,
+    lazy = false,
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
