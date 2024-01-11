@@ -59,7 +59,14 @@ local plugins = {
 
   {
     "nvim-tree/nvim-tree.lua",
-    opts = overrides.nvimtree,
+    opts = vim.tbl_deep_extend("force", overrides.nvimtree, {
+      view = {
+        width = {
+          min = 50,
+          max = 250,
+        },
+      },
+    }),
   },
 
   -- Install a plugin
