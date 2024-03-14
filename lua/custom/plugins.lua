@@ -61,9 +61,9 @@ local plugins = {
     "nvim-tree/nvim-tree.lua",
     opts = vim.tbl_deep_extend("force", overrides.nvimtree, {
       view = {
+        adaptive_size = true,
         width = {
-          min = 50,
-          max = 250,
+          max = 60,
         },
       },
     }),
