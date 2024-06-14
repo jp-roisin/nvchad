@@ -126,6 +126,25 @@ local plugins = {
     lazy = false,
   },
 
+  -- LSP support plugin
+  {
+    "neovim/nvim-lspconfig",
+    config = function()
+      require "plugins.configs.lspconfig"
+      require "custom.configs.lspconfig"
+    end,
+    lazy = false,
+  },
+
+  -- Null-ls for ESLint integration
+  {
+    "jose-elias-alvarez/null-ls.nvim",
+    config = function()
+      require "custom.configs.null-ls"
+    end,
+    lazy = false,
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
