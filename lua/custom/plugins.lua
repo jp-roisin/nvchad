@@ -145,6 +145,12 @@ local plugins = {
     lazy = false,
   },
 
+  -- vim-visual-multi
+  {
+    "mg979/vim-visual-multi",
+    lazy = false,
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
