@@ -17,7 +17,7 @@ local plugins = {
       },
     },
     config = function()
-      require "plugins.configs.lspconfig"
+      -- require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
     end, -- Override to setup mason-lspconfig
   },
@@ -137,17 +137,43 @@ local plugins = {
   },
 
   -- Null-ls for ESLint integration
-  {
-    "jose-elias-alvarez/null-ls.nvim",
-    config = function()
-      require "custom.configs.null-ls"
-    end,
-    lazy = false,
-  },
+  -- {
+  --   "jose-elias-alvarez/null-ls.nvim",
+  --   config = function()
+  --     require "custom.configs.null-ls"
+  --   end,
+  --   lazy = false,
+  -- },
 
   -- vim-visual-multi
   {
     "mg979/vim-visual-multi",
+    lazy = false,
+  },
+
+  {
+    "NeogitOrg/neogit",
+    dependencies = {
+      "nvim-lua/plenary.nvim", -- required
+      "sindrets/diffview.nvim", -- optional - Diff integration
+
+      -- Only one of these is needed, not both.
+      "nvim-telescope/telescope.nvim", -- optional
+      -- "ibhagwan/fzf-lua",              -- optional
+    },
+    config = true,
+    lazy = false,
+  },
+
+  {
+    "OXY2DEV/markview.nvim",
+    dependencies = {
+      -- You may not need this if you don't lazy load
+      -- Or if the parsers are in your $RUNTIMEPATH
+      "nvim-treesitter/nvim-treesitter",
+
+      "nvim-tree/nvim-web-devicons",
+    },
     lazy = false,
   },
 
